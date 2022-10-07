@@ -1,0 +1,83 @@
+/*
+Michelle Nguyen
+Fall 2022
+Lab 1
+Problem 0.0.0
+Description of problem:
+(Cryptography problem)
+Using ROT13, User decides to encrypt, decrypt, or terminate program depending on their input.
+*/
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+using namespace std;
+
+void repeat();
+void terminate(string userInput) {
+    exit(EXIT_SUCCESS);
+    }
+
+string rot13(string input) {
+    string *message = new string;
+    int index = 0;
+    const int size = input.size();
+            while(index != size)
+                {
+                if(input[index] >= 65 && input[index] <= 77)
+                        input[index] = input[index] + 13;
+                else if(input[index] >= 97 && input[index] <= 109)
+                    input[index] = input[index] + 13;
+                else if(input[index] >= 78 && input[index] <= 90)
+                    input[index] = input[index] - 13;
+                else if(input[index] >= 110 && input[index] <= 122)
+                    input[index] = input[index] - 13;
+                index++;
+                }
+    *message = input;
+            return *message;
+        }
+
+int main() {
+    string userInput;
+    string input;
+    string *message = new string;
+    
+    cout << "Please choose from the following: \n" << "1. Encode\n2. Decode\n3. Terminate\n";
+    cin >> userInput;
+    
+    while (userInput == "1" || userInput == "2") {
+    cout << "Enter a Message: \n";
+    cin.ignore();
+    getline(cin, input);
+        if (input.size() <= 25) {
+            rot13(input);
+            *message = input;
+        cout << "Translation: \n" << rot13(input) << endl;
+        delete message;
+            repeat();
+            break;
+            } else {
+     cout << "The max is 25 characters, Please try again. \n";
+     }
+   
+    if (userInput == "3") {
+        terminate(userInput);
+    }
+    }
+}
+
+void repeat()
+{
+    cout << "Would you like to repeat? \"Y\" or \"N\"\n";
+    string userInput;
+    cin >> userInput;
+    if (userInput == "Y") {
+        main();
+    }
+    else {
+        terminate(userInput);
+    }
+}
+
+
