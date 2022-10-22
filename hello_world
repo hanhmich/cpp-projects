@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "HH        HH     EEEEEEEEEE     LL               LL               000000000000" << endl;
+    cout << "HH        HH     EE             LL               LL               00        00" << endl;
+    cout << "HH        HH     EE             LL               LL               00        00" << endl;
+    cout << "HHHHHHHHHHHH     EEEEEEEEEE     LL               LL               00        00" << endl;
+    cout << "HH        HH     EE             LL               LL               00        00" << endl;
+    cout << "HH        HH     EE             LL               LL               00        00" << endl;
+    cout << "HH        HH     EE             LL               LL               00        00" << endl;
+    cout << "HH        HH     EEEEEEEEEE     LLLLLLLLLL       LLLLLLLLLL       000000000000" << endl << endl;
+    cout << "WW       WW       000000000000       RRRRRRRRRRR         LL               DDDDDDDDDD         !!!" << endl;
+    cout << "WW       WW       00        00       RR        RR        LL               DD       DD        !!!" << endl;
+    cout << "WW       WW       00        00       RR        RR        LL               DD        DD       !!!" << endl;
+    cout << "WW   W   WW       00        00       RRRRRRRRRRR         LL               DD        DD       !!!" << endl;
+    cout << "WW  W W  WW       00        00       RR      RR          LL               DD        DD       !!!" << endl;
+    cout << "WW W   W WW       00        00       RR       RR         LL               DD        DD       !!!" << endl;
+    cout << "WWW     WWW       00        00       RR        RR        LL               DD       DD           " << endl;
+    cout << "WW       WW       000000000000       RR         RR       LLLLLLLLLL       DDDDDDDDDD         !!!" << endl;
+
+   return 0;
+}
